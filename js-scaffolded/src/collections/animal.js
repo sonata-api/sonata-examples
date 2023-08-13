@@ -2,7 +2,7 @@ const { useFunctions } = require('sonata-api/untyped')
 
 module.exports = {
   description: {
-    $id: 'string',
+    $id: 'animal',
     properties: {
       name: {
         type: 'string'

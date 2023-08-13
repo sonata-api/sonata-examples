@@ -15,7 +15,7 @@ module.exports = {
   collections: {
     animal: () => ({
       description: {
-        $id: 'string',
+        $id: 'animal',
         properties: {
           name: {
             type: 'string'
