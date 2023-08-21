@@ -1,6 +1,7 @@
 const { useFunctions } = require('sonata-api/untyped')
+const { hello } = require('./hello')
 
-module.exports = {
+module.exports = () => ({
   description: {
     $id: 'animal',
     properties: {
@@ -21,6 +22,6 @@ module.exports = {
       'getAll',
       'insert'
     ]),
-    hello: () => 'Hello, world!'
+    hello
   }
-}
+})

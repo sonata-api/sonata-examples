@@ -1,5 +1,6 @@
 import { useFunctions } from 'sonata-api'
 import { description, Animal } from './description'
+import { hello } from './hello'
 
 export const animal = () => ({
   item: {} as typeof Animal,
@@ -9,6 +10,5 @@ export const animal = () => ({
       'getAll',
       'insert'
     ]),
-    hello: (name: string) => `Hello, ${name}!`
   }
 })

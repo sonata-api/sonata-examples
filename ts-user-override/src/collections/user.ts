@@ -3,10 +3,11 @@ import {
   defineDescription,
   createModel,
   deepMerge,
-  user as oldUser,
   userSchemaCallback
 
 } from 'sonata-api'
+
+import oldUser from '@sonata-api/system/collections/user/index.js'
 
 const newDescription = <const>{
   properties: {
