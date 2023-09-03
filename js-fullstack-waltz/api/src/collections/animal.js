@@ -19,12 +19,9 @@ module.exports = () => ({
       }
     }
   },
-  functions: {
-    ...useFunctions([
-      'getAll',
-      'insert',
-      'remove'
-    ]),
-    hello: () => 'Hello, world!'
-  }
+  functions: useFunctions([
+    'getAll',
+    'insert',
+    'remove'
+  ]),
 })

@@ -1,5 +1,6 @@
 const animal = require('./animal')
 
 module.exports = {
-  animal
+  animal,
+  animalToy
 }
