@@ -16,7 +16,7 @@ module.exports = () => ({
       },
       is_docile: {
         type: 'boolean'
-      }
+      },
     }
   },
   functions: useFunctions([

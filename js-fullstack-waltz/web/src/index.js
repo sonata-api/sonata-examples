@@ -10,7 +10,7 @@ const options = {
 
 useApp(options).then(async (app) => {
   const metaStore = useStore('meta')
-  await metaStore.describe()
+  await metaStore.$actions.describe()
 
   app.mount()
 })

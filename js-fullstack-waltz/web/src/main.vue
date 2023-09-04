@@ -3,12 +3,12 @@ const animalStore = useStore('animal')
 const addPanel = ref(false)
 
 const insertAnimal = async () => {
-  await animalStore.insert()
-  animalStore.clearItem()
+  await animalStore.$actions.insert()
+  animalStore.$actions.clearItem()
   addPanel.value = false
 }
 
-onMounted(animalStore.getAll)
+onMounted(animalStore.$actions.getAll)
 </script>
 
 <template>
@@ -74,7 +74,7 @@ onMounted(animalStore.getAll)
 
           <w-switch
             v-model="animal.is_docile"
-            @change="animalStore.functions.insert({
+            @change="animalStore.$functions.insert({
               what: {
                 _id: animal._id,
                 is_docile: !animal.is_docile
@@ -85,15 +85,15 @@ onMounted(animalStore.getAll)
           <w-icon
             v-clickable
             reactive
-            name="edit"
-            @click="animalStore.setItem(animal); addPanel = true"
+            icon="edit"
+            @click="animalStore.$actions.setItem(animal); addPanel = true"
           ></w-icon>
 
           <w-icon
             v-clickable
             reactive
-            name="trash"
-            @click="animalStore.remove(animal._id)"
+            icon="trash"
+            @click="animalStore.$actions.remove(animal._id)"
           ></w-icon>
         </div>
       </div>
@@ -115,7 +115,7 @@ onMounted(animalStore.getAll)
       <template #footer>
         <w-button
           :disabled="!animalStore.isInsertReady"
-          :loading="animalStore.insert.loading"
+          :loading="animalStore.loading.insert"
           @click="insertAnimal"
         >
           Inserir
