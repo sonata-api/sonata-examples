@@ -1,5 +1,7 @@
 # js-backoffice-waltz
 
+![Backoffice screenshot](screenshot.png)
+
 This example goes a little deeper into Sonata API and Waltz UI. It setups a backoffice for a ficticious "pet adoption" application as well as the client view.
 
 Once you serve both web/ and api/ the signin page should be available in `http://localhost:8080/user/signin`. You may sign in with `letmein` username and password. Client view should be available in `http://localhost:8080/animals`.
