@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@waltz-ui/i18n-ptbr": "^0.0.2",
-    "waltz-tailwind-layout": "^0.0.16",
+    "@waltz-ui/i18n-ptbr": "latest",
+    "waltz-tailwind-layout": "latest",
     "waltz-ui": "latest"
   },
   "devDependencies": {
